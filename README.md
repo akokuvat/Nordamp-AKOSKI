@@ -33,3 +33,11 @@ npm run preview
 - Fill contact details and org numbers (search for `[` in `siteContent.ts`).
 - Sub-pages marked `soon` in the nav (Projects, Paper & Pulp, Radiation, …) are navigation stubs — build them as routes/sections when ready.
 - Swap the flip-board line-art placeholders in `FlipBoard.tsx` (`ART`) for real photos.
+
+## Pages
+- Home (`/`) — one-page landing (bilingual EN/SV).
+- Who We Are: `/this-is-nordamp`, `/creating-the-future`, `/values`, `/strategy`, `/management`.
+- What We Do: `/projects`, `/paper-and-pulp`, `/renewable-energy`, `/agriculture`, `/maintenance`, `/services`, `/electrification-automation`, `/radiation`, `/digital-ai`.
+
+All sub-page copy lives in `src/config/pagesContent.ts`. `vercel.json` rewrites all paths to `index.html` so client-side routing / deep links work.
+Sub-pages are currently English; add Swedish by extending `pagesContent.ts` per language when ready.

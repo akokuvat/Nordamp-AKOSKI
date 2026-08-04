@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import Home from './pages/Home';
+import SubPage from './pages/SubPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -18,6 +19,7 @@ export default function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/:slug" element={<SubPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
